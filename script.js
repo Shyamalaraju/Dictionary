@@ -4,7 +4,7 @@ const wrapper = document.querySelector(".wrapper"),
   infoText = wrapper.querySelector(".info-text"),
   synonyms = wrapper.querySelector(".synonyms .list"),
   removeIcon = wrapper.querySelector(".search span");
-let audio = null; // Initialize audio as null
+let audio = null; 
 
 function data(result, word) {
   if (result.title) {
@@ -12,7 +12,7 @@ function data(result, word) {
   } else {
     wrapper.classList.add("active");
     let definitions = result[0].meanings[0].definitions[0],
-      phoneticsList = result[0].phonetics, // Get all phonetics objects
+      phoneticsList = result[0].phonetics, 
       phonetics = `${result[0].meanings[0].partOfSpeech}  /${phoneticsList[0]?.text || ''}/`;
     
     document.querySelector(".word p").innerText = result[0].word;
